@@ -1,0 +1,26 @@
+Blocking executes synchronously -> code execution in order due to JSON,stringify...
+Non-Blocking executes Asynchronously -> code execution async 
+
+BIG Picture
+
+Javascript Engine V8 --> Node JS API's --> Node.js Blinding --> libuv
+                    | fs  http path crypto |
+libuv :--> Handles the tasks : 
+1 : Asynchronous I/O 
+File System , Network operations
+
+This Asynchronous Works because of Event Loop 
+The Event Loop Execution the callback
+
+---The Event Loop get helps from Thread Pool and execution the task -somethings 
+but most of the time executed by OS and After the execution it events to Event Loop and Event Loop take care of it .
+
+THE Event Loop Has a Four Execution
+ i)  Timers
+ ii) I/O callbacks
+ iii) setImmediate
+ iv) Close Callbacks
+
+This is how Asynchronous Works In Node JS !!!
+
+
