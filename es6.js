@@ -26,20 +26,20 @@
 //   abc(arr,arr3,arr2)
 
 
-console.log("First Console");
+// console.log("First Console");
 
 
-setTimeout(function second() {
-    console.log("second Console");
-}, (0));
-console.log("thrid Console")
+// setTimeout(function second() {
+//     console.log("second Console");
+// }, (0));
+// console.log("thrid Console")
 
-const Fourth = () => {
-    setTimeout(function four() {
-        console.log("fourth Console");
-    }, (6000));
-}
-Fourth()
+// const Fourth = () => {
+//     setTimeout(function four() {
+//         console.log("fourth Console");
+//     }, (6000));
+// }
+// Fourth()
 // const EventEmitter = require("events");
 import EventEmitter from "events"
 
@@ -62,3 +62,10 @@ import EventEmitter from "events"
 // })
 // OffEvent.emit("Clicked", "Boo");
 // OffEvent.emit("MouseDown");
+
+const obj = {
+    key: "Hello",
+    key: 123,
+    key: "Hello23"
+}
+console.log(obj);
