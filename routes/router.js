@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 let users = [];
 //all routes in users must stareted as "/"
-router.get('/', (req, res) => {
+router.get('/', (res) => {
     console.log(users);
     res.send(users);
 
@@ -28,25 +28,25 @@ router.delete("/:id", (req, res) => {
 router.patch("/:id", (req, res) => {
     const { id } = req.params;
     const { firstName, lastName, age } = req.body;
-    const user = users.find(user => user.id === id);
+    const User = users.find(user => user.id === id);
     if (firstName) {
-        user.firstName = firstName;
+        User.firstName = firstName;
     }
     if (lastName) {
-        user.lastName = lastName;
+        User.lastName = lastName;
     }
     if (age) {
-        user.age = age;
+        User.age = age;
     }
-    users.push(user)
+    users.push(User)
     res.send(`User with ${id} was edied to Database`);
 
 
 })
 router.get("/:id", (req, res) => {
     const { id } = req.params;
-    const user = users.find(user => user.id === id);
-    res.send(user)
+    const data = users.find(user => user.id === id);
+    res.send(data)
 
 
 })

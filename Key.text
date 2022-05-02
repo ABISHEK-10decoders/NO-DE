@@ -21,6 +21,28 @@ THE Event Loop Has a Four Execution
  iii) setImmediate
  iv) Close Callbacks
 
-This is how Asynchronous Works In Node JS !!!
+This is how Asynchronous Works In Node JS !!! 
+
+
+HTTP REQUEST : 
+
+GET , POST , PUT , DELETE
+
+METHOD - POST 
+PATH : /messages 
+BODY : { text: "hello" , photo :"....jpg"}
+HEADERS : specified which server your request
+
+HTTP RESPONSE :
+
+HEADERS 
+Content-Type : "application/json"
+BODY : {}
+STATUS CODE : Success or Failed 
+[200-299 successful response]
+[100-199 Informational responses]
+[300-399 Redirect]
+[400-499 Client Errors]
+[500-599 Server Errors]
 
 
